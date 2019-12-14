@@ -7,7 +7,7 @@ require './lib/message_link'
 
 bot = Discordrb::Bot.new token: configatron.token
 
-message_link = MessageLink.new
+message_link = MessageLink.new(bot)
 
 bot.message(&message_link.method(:on_message))
 
